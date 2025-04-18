@@ -86,7 +86,7 @@ const Home = () => {
               }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <img src='/IMG_20230610_151137.jpg' alt="Raj Kumar Mohanty" />
+              <img src='/profile_img.jpg' alt="Raj Kumar Mohanty" />
             </motion.div>
           </div>
         </div>
@@ -103,6 +103,7 @@ const Home = () => {
             <p>Passionate about creating seamless web experiences with modern technologies. Specializing in the MERN stack with a focus on responsive design and user-friendly interfaces.</p>
             
             <div className="cta-buttons">
+              <a href="/portfolio">
               <motion.button 
                 className="cta-primary"
                 whileHover={{ scale: 1.05 }}
@@ -110,6 +111,8 @@ const Home = () => {
               >
                 View My Work
               </motion.button>
+              </a>
+              <a href="/contact">
               <motion.button 
                 className="cta-secondary"
                 whileHover={{ scale: 1.05 }}
@@ -117,6 +120,7 @@ const Home = () => {
               >
                 Let's Connect
               </motion.button>
+              </a>
             </div>
           </motion.div>
         </div>
