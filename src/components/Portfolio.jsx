@@ -6,40 +6,58 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 const projects = [
   {
     id: 1,
-    title: "Resume Builder App",
-    description: "An interactive resume builder with customizable templates, dynamic form sections based on user experience level, and live preview functionality. Users can download resumes in A4 format.",
-    image: "https://images.pexels.com/photos/5598289/pexels-photo-5598289.jpeg?auto=compress&cs=tinysrgb&w=600",
-    tech: ["React", "Node.js", "Express", "MongoDB"],
-    github: "https://github.com/rajzzz10/resumebuilder", // update with actual repo link if available
-    demo: "" // update with actual deployed link if available
+    title: "SOLP Learning Platform",
+    description: "A complete learning management platform available on both web and mobile. Features role-based access for Admins, Mentors, Trainers, and Students. Users can purchase courses, watch video lessons, access notes, submit assignments, participate in discussions, and complete projects. The mobile app also includes AI-powered quiz generation based on selected topics for interactive learning.",
+    image: "https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    tech: ["React", "React Native", "Node.js", "Express", "MongoDB", "AI Integration"],
+    github: "",
+    demo: "https://www.stepsoflearningprocess.com"
   },
   {
     id: 2,
-    title: "FitZone App",
-    description: "A fitness web app that offers personalized workout routines, diet plans, informative articles, and gym facts. Users can search terms like 'back', 'biceps', or 'push pull legs' to explore related workouts. All content is dynamically managed for easy updates and scalability.",
-    image: "https://images.pexels.com/photos/791763/pexels-photo-791763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tech: ["React", "Node.js", "Express", "MongoDB"],
-    github: "https://github.com/rajzzz10/FitZone", // replace with your actual GitHub repo link
-    demo: "" // replace with your actual deployed app link
+    title: "Oneploy Job Portal",
+    description: "A recruitment platform connecting companies, recruiters, and job seekers. Recruiters can create job postings, search candidates using filters like skills and experience, view detailed profiles, and connect with potential hires through a controlled messaging system. Users can apply for jobs, manage profiles, and communicate with recruiters after connection requests are accepted.",
+    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
+    github: "",
+    demo: "https://www.oneploy.com"
   },
   {
     id: 3,
-    title: "PeerConnect - Video Call App",
-    description: "A real-time peer-to-peer video calling application with advanced features including video/audio calls, screen sharing, live chat during meetings, and a dedicated chat section outside of meetings. Built for seamless virtual communication and collaboration.",
-    image: "https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tech: ["React", "Socket.io", "WebRTC", "Node.js", "Express"],
-    github: "https://github.com/rajzzz10/VideoCall", // replace with your actual GitHub repo link
-    demo: "" // replace with your actual deployed app link
-  }
-  // {
-  //   id: 4,
-  //   title: "Blog Platform",
-  //   description: "A content management system with markdown support and user authentication.",
-  //   image: "/api/placeholder/400/250",
-  //   tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-  //   github: "https://github.com",
-  //   demo: "https://example.com"
-  // }
+    title: "EventLoop - Event Management Platform",
+    description: "A multi-vendor event management platform where vendors can offer services such as catering, photography, decoration, and more. Dynamic forms adapt automatically based on the selected service type. Users can customize bookings, calculate pricing in real-time, and make payments through an integrated booking system.",
+    image: "https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Payment Gateway"],
+    github: "",
+    demo: "https://eventloop.com/"
+  },
+  {
+  id: 5,
+  title: "EMS - Employee Management System",
+  description: "A web and mobile employee management platform that streamlines attendance, leave management, timesheets, and company communication. Employees can check in/out, submit leave requests, fill daily timesheets, and view holiday calendars. Admins can monitor attendance records, manage leaves, review timesheets, and publish company-wide notices and announcements.",
+  image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  tech: ["React", "React Native", "Node.js", "Express", "MongoDB"],
+  github: "",
+  demo: "https://ems.stepsoflearningprocess.com/"
+},
+{
+  id: 6,
+  title: "CMS - Client Acquisition & Marketing Platform",
+  description: "A business automation platform designed for lead generation and customer outreach. The system extracts unstructured business information, converts it into organized datasets, and manages contacts across multiple countries and industries. It also supports automated email campaigns, scheduled outreach based on regional time zones, and centralized communication tracking.",
+  image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  tech: ["React", "Node.js", "Express", "MongoDB", "Email Automation"],
+  github: "",
+  demo: "https://cms.dayashankardas.com/"
+},
+{
+  id: 7,
+  title: "Inventory & Billing Management System",
+  description: "A complete inventory and billing solution for businesses. The platform manages products, stock levels, purchases, sales, customer accounts, and invoice generation. Inventory is automatically updated during transactions, while business owners can track receivables, manage customer balances, and view detailed sales and purchase analytics through reporting dashboards.",
+  image: "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  tech: ["React", "Node.js", "Express", "MongoDB"],
+  github: "",
+  demo: "https://estimate.thekamalenterprises.in/"
+}
 ];
 
 const ProjectCard = ({ project, index }) => {
@@ -63,15 +81,15 @@ const ProjectCard = ({ project, index }) => {
         <div className="project-image">
           <img src={project.image} alt={project.title} />
           <div className="project-links">
-            <motion.a
+            {/* <motion.a
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
             >
               <FaGithub />
-            </motion.a>
-            <motion.a
+            </motion.a> */}
+            {/* <motion.a
               href={project.demo || "#"}
               target={project.demo ? "_blank" : "_self"}
               rel="noopener noreferrer"
@@ -79,7 +97,7 @@ const ProjectCard = ({ project, index }) => {
               onClick={handleDemoClick}
             >
               <FaExternalLinkAlt />
-            </motion.a>
+            </motion.a> */}
           </div>
         </div>
         <div className="project-info">
@@ -94,30 +112,30 @@ const ProjectCard = ({ project, index }) => {
       </motion.div>
       {/* Modal */}
       <AnimatePresence>
-      {showModal && (
-        <motion.div
-          className="modal-overlay"
-          onClick={() => setShowModal(false)}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-        >
+        {showModal && (
           <motion.div
-            className="modal-content"
-            onClick={(e) => e.stopPropagation()}
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.8, opacity: 0 }}
+            className="modal-overlay"
+            onClick={() => setShowModal(false)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <h2>Project Not Deployed</h2>
-            <p>This project is not deployed yet. It will be available soon!</p>
-            <button onClick={() => setShowModal(false)}>Close</button>
+            <motion.div
+              className="modal-content"
+              onClick={(e) => e.stopPropagation()}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <h2>Project Not Deployed</h2>
+              <p>This project is not deployed yet. It will be available soon!</p>
+              <button onClick={() => setShowModal(false)}>Close</button>
+            </motion.div>
           </motion.div>
-        </motion.div>
-        
-      )}
+
+        )}
       </AnimatePresence>
 
     </>
@@ -138,7 +156,7 @@ const Portfolio = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        My Portfolio
+        Featured Projects
       </motion.h1>
 
       <motion.p
@@ -147,7 +165,7 @@ const Portfolio = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="section-description"
       >
-        Here are some of my recent projects. Each demonstrates different aspects of my technical expertise.
+        A collection of web and mobile applications I've built, ranging from learning platforms and job portals to enterprise management systems and business automation solutions.
       </motion.p>
 
       <div className="projects-grid">

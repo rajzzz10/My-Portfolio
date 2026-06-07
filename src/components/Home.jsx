@@ -9,6 +9,7 @@ const TypeWriter = () => {
   const titles = [
     "MERN Stack Developer",
     "React Developer",
+    "React Native Developer",
     "Frontend Developer",
     "Backend Developer"
   ];
@@ -52,14 +53,14 @@ const Scene = () => {
       <ambientLight intensity={0.3} />
       <pointLight position={[10, 10, 10]} intensity={0.8} />
       <Stars
-  radius={300}
-  depth={80}
-  count={8000}
-  factor={6}
-  saturation={0}
-  fade
-  speed={0.4}
-/>
+        radius={300}
+        depth={80}
+        count={8000}
+        factor={6}
+        saturation={0}
+        fade
+        speed={0.4}
+      />
       <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
     </>
   );
@@ -129,107 +130,159 @@ const Home = () => {
       </div>
       <section className="stats-section">
 
-  <div className="stat-card">
-    <h3>15+</h3>
-    <p>Projects Built</p>
-  </div>
+        <div className="stat-card">
+          <h3>10+</h3>
+          <p>Projects Built</p>
+        </div>
 
-  <div className="stat-card">
-    <h3>Web & Mobile</h3>
-    <p>Applications</p>
-  </div>
+        <div className="stat-card">
+          <h3>Web & Mobile</h3>
+          <p>Applications</p>
+        </div>
 
-  <div className="stat-card">
-    <h3>AWS EC2</h3>
-    <p>Deployments</p>
-  </div>
+        <div className="stat-card">
+          <h3>AWS EC2 , Cpanel , etc</h3>
+          <p>Deployments</p>
+        </div>
 
-</section>
+      </section>
 
-<section className="skills-section">
-
-  <h2>Tech Stack</h2>
+      <section className="skills-section">
+  <h2>Technical Expertise</h2>
 
   <div className="skills-grid">
 
-    <div className="skill-category">
-      <h3>Frontend</h3>
-      <span>React.js</span>
-      <span>Next.js</span>
-      <span>JavaScript</span>
-      <span>TypeScript</span>
+    <div className="skill-card">
+      <div className="skill-icon">⚛️</div>
+      <h3>Frontend Development</h3>
+      <p>
+        Building responsive, scalable and modern web applications.
+      </p>
+
+      <div className="skill-tags">
+        <span>React.js</span>
+        <span>Next.js</span>
+        <span>JavaScript</span>
+        <span>TypeScript</span>
+        <span>HTML5</span>
+        <span>CSS3</span>
+      </div>
     </div>
 
-    <div className="skill-category">
-      <h3>Backend</h3>
-      <span>Node.js</span>
-      <span>Express.js</span>
-      <span>MongoDB</span>
-      <span>REST APIs</span>
+    <div className="skill-card">
+      <div className="skill-icon">🖥️</div>
+      <h3>Backend Development</h3>
+      <p>
+        Developing APIs, authentication systems and business logic.
+      </p>
+
+      <div className="skill-tags">
+        <span>Node.js</span>
+        <span>Express.js</span>
+        <span>MongoDB</span>
+        <span>REST APIs</span>
+        <span>JWT</span>
+      </div>
     </div>
 
-    <div className="skill-category">
-      <h3>Mobile</h3>
-      <span>React Native</span>
+    <div className="skill-card">
+      <div className="skill-icon">📱</div>
+      <h3>Mobile Development</h3>
+      <p>
+        Cross-platform mobile applications using React Native.
+      </p>
+
+      <div className="skill-tags">
+        <span>React Native</span>
+        <span>Expo</span>
+        <span>Android</span>
+        <span>iOS</span>
+      </div>
     </div>
 
-    <div className="skill-category">
-      <h3>Cloud</h3>
-      <span>AWS EC2</span>
-      <span>Linux</span>
-      <span>Git</span>
-      <span>cPanel</span>
+    <div className="skill-card">
+      <div className="skill-icon">☁️</div>
+      <h3>Cloud & Deployment</h3>
+      <p>
+        Deploying and managing applications in production environments.
+      </p>
+
+      <div className="skill-tags">
+        <span>AWS EC2</span>
+        <span>Linux</span>
+        <span>Vercel</span>
+        <span>cPanel</span>
+        <span>Git</span>
+        <span>GitHub</span>
+      </div>
     </div>
 
   </div>
-
 </section>
 
-<section className="learning-section">
-
+      <section className="learning-section">
   <h2>Currently Exploring</h2>
 
   <div className="learning-grid">
 
     <div className="learning-card">
-      Docker
+      <span className="learning-icon">🐳</span>
+      <h3>Docker</h3>
+      <p>Containerization & deployment workflows</p>
     </div>
 
     <div className="learning-card">
-      CI/CD
+      <span className="learning-icon">⚙️</span>
+      <h3>CI/CD</h3>
+      <p>Automated testing and deployments</p>
     </div>
 
     <div className="learning-card">
-      System Design
+      <span className="learning-icon">🏗️</span>
+      <h3>System Design</h3>
+      <p>Scalable architecture patterns</p>
     </div>
 
     <div className="learning-card">
-      AWS Load Balancers
+      <span className="learning-icon">☁️</span>
+      <h3>AWS Load Balancers</h3>
+      <p>Traffic distribution strategies</p>
     </div>
 
     <div className="learning-card">
-      Auto Scaling Groups
+      <span className="learning-icon">🚀</span>
+      <h3>Auto Scaling</h3>
+      <p>High availability infrastructure</p>
     </div>
 
   </div>
-
 </section>
 
-<section className="footer-cta">
+      <section className="footer-cta">
 
-  <h2>
-    Let's Build Something Amazing Together
-  </h2>
+  <div className="cta-card">
 
-  <p>
-    Open to opportunities, collaborations and exciting projects.
-  </p>
+    <span className="cta-badge">
+      Available For Opportunities
+    </span>
 
-  <Link to="/contact">
-    <button className="cta-primary">
-      Contact Me
-    </button>
-  </Link>
+    <h2>
+      Building Scalable Web & Mobile Applications
+    </h2>
+
+    <p>
+      Looking for a Full-Stack MERN Developer?
+      Let's discuss your next project, product,
+      or engineering opportunity.
+    </p>
+
+    <Link to="/contact">
+      <button className="cta-primary">
+        Get In Touch
+      </button>
+    </Link>
+
+  </div>
 
 </section>
 

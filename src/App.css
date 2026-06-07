@@ -736,211 +736,265 @@ body {
   color: var(--text-secondary);
   font-size: 1.1rem;
   font-weight: 500;
-}
-/* ==================== SKILLS SECTION - PREMIUM VERSION ==================== */
+
+
+}/* ========================= */
+/* TECHNICAL EXPERTISE */
+/* ========================= */
+
 .skills-section {
-  padding: 110px 50px;
-  background: var(--bg-primary);
-  position: relative;
+  padding: 100px 20px;
+  max-width: 1300px;
+  margin: auto;
 }
 
 .skills-section h2 {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 70px;
-  background: linear-gradient(90deg, #ffffff, var(--accent), var(--accent-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-weight: 800;
+  margin-bottom: 60px;
+  color: white;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 35px;
-  max-width: 1250px;
-  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
-.skill-category {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 28px;
-  padding: 40px 35px;
+
+/* Center the 4th card */
+.skills-grid .skill-card:last-child {
+  grid-column: 2 / 3;
+}
+
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-grid .skill-card:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid .skill-card:last-child {
+    grid-column: auto;
+  }
+}
+
+.skill-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 30px;
   backdrop-filter: blur(20px);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.35s ease;
   position: relative;
   overflow: hidden;
 }
 
-.skill-category::before {
-  content: '';
+.skill-card::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-light));
-  transform: scaleX(0);
-  transition: transform 0.4s ease;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(138,43,226,0.15),
+    transparent
+  );
+  opacity: 0;
+  transition: 0.4s;
 }
 
-.skill-category:hover {
-  transform: translateY(-15px);
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
   border-color: var(--accent);
-  box-shadow: 0 30px 60px rgba(138, 43, 226, 0.25);
+  box-shadow: 0 20px 40px rgba(138,43,226,0.25);
 }
 
-.skill-category:hover::before {
-  transform: scaleX(1);
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.skill-category h3 {
-  color: var(--accent);
-  font-size: 1.5rem;
-  margin-bottom: 28px;
-  font-weight: 700;
-  position: relative;
-  padding-bottom: 12px;
+.skill-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: white;
 }
 
-.skill-category h3::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background: var(--accent);
-  border-radius: 3px;
+.skill-card p {
+  color: rgba(255,255,255,0.7);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  min-height: 75px;
 }
 
-.skill-category span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 8px 10px 8px 0;
-  padding: 12px 24px;
-  background: rgba(138, 43, 226, 0.1);
-  color: var(--accent-light);
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tags span {
+  padding: 8px 14px;
   border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 500;
-  border: 1px solid rgba(138, 43, 226, 0.2);
-  transition: all 0.3s ease;
-  white-space: nowrap;
+  background: rgba(138,43,226,0.15);
+  border: 1px solid rgba(138,43,226,0.3);
+  color: #d7c6ff;
+  font-size: 0.9rem;
+  transition: 0.3s;
 }
 
-.skill-category span:hover {
+.skill-tags span:hover {
   background: var(--accent);
   color: white;
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.3);
+  transform: translateY(-3px);
 }
 
-/* Responsive for Skills */
 @media (max-width: 768px) {
-  .skills-section {
-    padding: 80px 20px;
+  .skills-section h2 {
+    font-size: 2.2rem;
   }
-  
-  .skill-category {
-    padding: 32px 25px;
+
+  .skill-card {
+    padding: 25px;
   }
-  
-  .skills-grid {
-    gap: 25px;
+
+  .skill-card p {
+    min-height: auto;
   }
 }
-/* ==================== LEARNING SECTION ==================== */
 .learning-section {
-  padding: 100px 50px;
-  background: var(--bg-secondary);
+  padding: 100px 20px;
+  max-width: 1300px;
+  margin: auto;
 }
 
 .learning-section h2 {
   text-align: center;
-  font-size: 2.6rem;
+  font-size: 3rem;
   margin-bottom: 60px;
-  background: linear-gradient(90deg, #f5f5f5, var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .learning-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  justify-content: center;
-  max-width: 1100px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
 }
 
 .learning-card {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(16px);
-  padding: 18px 32px;
-  border-radius: 50px;
-  color: var(--text-primary);
-  font-weight: 500;
-  transition: all 0.4s ease;
-  white-space: nowrap;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 22px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.35s ease;
 }
 
 .learning-card:hover {
-  transform: translateY(-8px) scale(1.08);
-  background: rgba(138, 43, 226, 0.2);
+  transform: translateY(-8px);
   border-color: var(--accent);
-  color: var(--accent-light);
-  box-shadow: 0 15px 30px rgba(138, 43, 226, 0.25);
+  box-shadow: 0 15px 30px rgba(138,43,226,0.25);
 }
 
-/* ==================== FOOTER CTA ==================== */
+.learning-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.learning-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.learning-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+  .learning-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .learning-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .footer-cta {
-  padding: 120px 50px;
+  padding: 120px 20px;
+}
+
+.cta-card {
+  max-width: 900px;
+  margin: auto;
   text-align: center;
-  background: linear-gradient(180deg, var(--bg-secondary), var(--bg-primary));
+  padding: 70px 40px;
+
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(25px);
+
+  border-radius: 32px;
   position: relative;
   overflow: hidden;
 }
 
-.footer-cta::before {
-  content: '';
+.cta-card::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(138,43,226,0.08) 0%, transparent 70%);
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(138,43,226,0.18),
+      transparent 70%
+    );
+
   pointer-events: none;
 }
 
-.footer-cta h2 {
-  font-size: 2.7rem;
-  margin-bottom: 20px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+.cta-badge {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 10px 20px;
 
-.footer-cta p {
-  font-size: 1rem;
-  color: var(--text-secondary);
-  max-width: 600px;
-  margin: 0 auto 40px;
-}
-
-.footer-cta .cta-primary {
-  padding: 15px 40px;
-  font-size: 1.2rem;
-  font-weight: 600;
   border-radius: 50px;
-  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
-  transition: all 0.4s ease;
+
+  background: rgba(138,43,226,0.15);
+  border: 1px solid rgba(138,43,226,0.3);
+
+  color: var(--accent-light);
+  font-size: 0.9rem;
 }
 
-.footer-cta .cta-primary:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(138, 43, 226, 0.4);
+.cta-card h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.cta-card p {
+  max-width: 650px;
+  margin: 0 auto 35px;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
 }

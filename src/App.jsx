@@ -102,7 +102,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           Home
         </Link>
         <Link to="/portfolio" className={location.pathname === '/portfolio' ? 'active' : ''}>
-          Portfolio
+          Featured Projects
         </Link>
         <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>
           Contact Me
