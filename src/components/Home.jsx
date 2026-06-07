@@ -55,7 +55,7 @@ const Scene = () => {
       <Stars
         radius={300}
         depth={80}
-        count={8000}
+        count={2000}
         factor={6}
         saturation={0}
         fade
@@ -293,11 +293,11 @@ const Home = () => {
 
 </section>
 
-      {/* <div className="scene-container">
-        <Canvas>
+      <div className="scene-container">
+        <Canvas style={{ pointerEvents: "none" }}>
           <Scene />
         </Canvas>
-      </div> */}
+      </div>
     </motion.div>
   );
 };
