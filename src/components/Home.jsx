@@ -293,11 +293,11 @@ const Home = () => {
 
 </section>
 
-      <div className="scene-container">
+      {/* <div className="scene-container">
         <Canvas>
           <Scene />
         </Canvas>
-      </div>
+      </div> */}
     </motion.div>
   );
 };
