@@ -61,7 +61,14 @@ const Scene = () => {
         fade
         speed={0.4}
       />
-      <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
+      {/* <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} /> */}
+      <OrbitControls
+  enableZoom={false}
+  enablePan={false}
+  enableRotate={false}
+  autoRotate
+  autoRotateSpeed={0.5}
+/>
     </>
   );
 };
