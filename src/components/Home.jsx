@@ -52,13 +52,14 @@ const Scene = () => {
       <ambientLight intensity={0.3} />
       <pointLight position={[10, 10, 10]} intensity={0.8} />
       <Stars
-        radius={100}
-        depth={50}
-        count={5000}
-        factor={4}
-        saturation={0}
-        fade
-      />
+  radius={300}
+  depth={80}
+  count={8000}
+  factor={6}
+  saturation={0}
+  fade
+  speed={0.4}
+/>
       <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
     </>
   );
@@ -101,7 +102,7 @@ const Home = () => {
           >
             <h1>I am <span className="name">Raj Kumar Mohanty</span></h1>
             <h2><TypeWriter /></h2>
-            <p>Passionate about creating seamless web experiences with modern technologies. Specializing in the MERN stack with a focus on responsive design and user-friendly interfaces.</p>
+            <p>Full-Stack Developer specializing in React.js, Next.js, React Native, Node.js, Express.js, and MongoDB.Experienced in building and deploying web and mobile applications on AWS EC2 and Linux environments.Currently learning Docker, CI/CD, System Design, and cloud scalability concepts.</p>
 
             <div className="cta-buttons">
               <Link to="/portfolio">
@@ -126,6 +127,111 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
+      <section className="stats-section">
+
+  <div className="stat-card">
+    <h3>15+</h3>
+    <p>Projects Built</p>
+  </div>
+
+  <div className="stat-card">
+    <h3>Web & Mobile</h3>
+    <p>Applications</p>
+  </div>
+
+  <div className="stat-card">
+    <h3>AWS EC2</h3>
+    <p>Deployments</p>
+  </div>
+
+</section>
+
+<section className="skills-section">
+
+  <h2>Tech Stack</h2>
+
+  <div className="skills-grid">
+
+    <div className="skill-category">
+      <h3>Frontend</h3>
+      <span>React.js</span>
+      <span>Next.js</span>
+      <span>JavaScript</span>
+      <span>TypeScript</span>
+    </div>
+
+    <div className="skill-category">
+      <h3>Backend</h3>
+      <span>Node.js</span>
+      <span>Express.js</span>
+      <span>MongoDB</span>
+      <span>REST APIs</span>
+    </div>
+
+    <div className="skill-category">
+      <h3>Mobile</h3>
+      <span>React Native</span>
+    </div>
+
+    <div className="skill-category">
+      <h3>Cloud</h3>
+      <span>AWS EC2</span>
+      <span>Linux</span>
+      <span>Git</span>
+      <span>cPanel</span>
+    </div>
+
+  </div>
+
+</section>
+
+<section className="learning-section">
+
+  <h2>Currently Exploring</h2>
+
+  <div className="learning-grid">
+
+    <div className="learning-card">
+      Docker
+    </div>
+
+    <div className="learning-card">
+      CI/CD
+    </div>
+
+    <div className="learning-card">
+      System Design
+    </div>
+
+    <div className="learning-card">
+      AWS Load Balancers
+    </div>
+
+    <div className="learning-card">
+      Auto Scaling Groups
+    </div>
+
+  </div>
+
+</section>
+
+<section className="footer-cta">
+
+  <h2>
+    Let's Build Something Amazing Together
+  </h2>
+
+  <p>
+    Open to opportunities, collaborations and exciting projects.
+  </p>
+
+  <Link to="/contact">
+    <button className="cta-primary">
+      Contact Me
+    </button>
+  </Link>
+
+</section>
 
       <div className="scene-container">
         <Canvas>
