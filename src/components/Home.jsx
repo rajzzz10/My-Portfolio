@@ -55,7 +55,7 @@ const Scene = () => {
       <Stars
         radius={300}
         depth={80}
-        count={2000}
+        count={4000}
         factor={6}
         saturation={0}
         fade
