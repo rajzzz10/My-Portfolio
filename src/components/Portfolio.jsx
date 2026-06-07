@@ -23,6 +23,22 @@ const projects = [
     demo: "https://www.oneploy.com"
   },
   {
+    id: 8,
+    title: "MLA Grievance & Organization Management Platform",
+    description: "A comprehensive platform designed for grievance handling, event management, and organizational operations. Users can register, submit grievances, and track resolution status using unique grievance IDs. Administrators can assign grievances to officials, manage users and organizational roles, oversee events, and publish updates. The platform also includes social media automation for publishing content across multiple channels and supports fine-grained role-based access control for different departments and teams.",
+    image: "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Role-Based Access",
+      "Email Notifications"
+    ],
+    github: "",
+    demo: ""
+  },
+  {
     id: 3,
     title: "EventLoop - Event Management Platform",
     description: "A multi-vendor event management platform where vendors can offer services such as catering, photography, decoration, and more. Dynamic forms adapt automatically based on the selected service type. Users can customize bookings, calculate pricing in real-time, and make payments through an integrated booking system.",
@@ -32,32 +48,32 @@ const projects = [
     demo: "https://eventloop.com/"
   },
   {
-  id: 5,
-  title: "EMS - Employee Management System",
-  description: "A web and mobile employee management platform that streamlines attendance, leave management, timesheets, and company communication. Employees can check in/out, submit leave requests, fill daily timesheets, and view holiday calendars. Admins can monitor attendance records, manage leaves, review timesheets, and publish company-wide notices and announcements.",
-  image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  tech: ["React", "React Native", "Node.js", "Express", "MongoDB"],
-  github: "",
-  demo: "https://ems.stepsoflearningprocess.com/"
-},
-{
-  id: 6,
-  title: "CMS - Client Acquisition & Marketing Platform",
-  description: "A business automation platform designed for lead generation and customer outreach. The system extracts unstructured business information, converts it into organized datasets, and manages contacts across multiple countries and industries. It also supports automated email campaigns, scheduled outreach based on regional time zones, and centralized communication tracking.",
-  image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  tech: ["React", "Node.js", "Express", "MongoDB", "Email Automation"],
-  github: "",
-  demo: "https://cms.dayashankardas.com/"
-},
-{
-  id: 7,
-  title: "Inventory & Billing Management System",
-  description: "A complete inventory and billing solution for businesses. The platform manages products, stock levels, purchases, sales, customer accounts, and invoice generation. Inventory is automatically updated during transactions, while business owners can track receivables, manage customer balances, and view detailed sales and purchase analytics through reporting dashboards.",
-  image: "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  tech: ["React", "Node.js", "Express", "MongoDB"],
-  github: "",
-  demo: "https://estimate.thekamalenterprises.in/"
-}
+    id: 5,
+    title: "EMS - Employee Management System",
+    description: "A web and mobile employee management platform that streamlines attendance, leave management, timesheets, and company communication. Employees can check in/out, submit leave requests, fill daily timesheets, and view holiday calendars. Admins can monitor attendance records, manage leaves, review timesheets, and publish company-wide notices and announcements.",
+    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    tech: ["React", "React Native", "Node.js", "Express", "MongoDB"],
+    github: "",
+    demo: "https://ems.stepsoflearningprocess.com/"
+  },
+  {
+    id: 6,
+    title: "CMS - Client Acquisition & Marketing Platform",
+    description: "A business automation platform designed for lead generation and customer outreach. The system extracts unstructured business information, converts it into organized datasets, and manages contacts across multiple countries and industries. It also supports automated email campaigns, scheduled outreach based on regional time zones, and centralized communication tracking.",
+    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Email Automation"],
+    github: "",
+    demo: "https://cms.dayashankardas.com/"
+  },
+  {
+    id: 7,
+    title: "Inventory & Billing Management System",
+    description: "A complete inventory and billing solution for businesses. The platform manages products, stock levels, purchases, sales, customer accounts, and invoice generation. Inventory is automatically updated during transactions, while business owners can track receivables, manage customer balances, and view detailed sales and purchase analytics through reporting dashboards.",
+    image: "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    tech: ["React", "Node.js", "Express", "MongoDB"],
+    github: "",
+    demo: "https://estimate.thekamalenterprises.in/"
+  }
 ];
 
 const ProjectCard = ({ project, index }) => {
